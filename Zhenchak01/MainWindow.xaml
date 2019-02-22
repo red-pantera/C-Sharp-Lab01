@@ -1,0 +1,22 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Birthday" Height="400" Width="600">
+          
+    <Grid Background="#FFFFF0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0" >
+            <TextBlock  Background="#FFFFF0" Foreground="Gray" FontWeight="Bold" TextAlignment="Center" FontSize="18" Margin ="20" Text="Enter your date of birth"/>
+        </StackPanel>
+        <DatePicker Grid.Row="1" Background="#FFFFF0" VerticalAlignment="Center" Margin ="15" SelectedDate="{Binding BirthDate, Mode=TwoWay}"></DatePicker>
+        <TextBlock Grid.Row ="2" Foreground="Gray" TextWrapping="Wrap" TextAlignment="Center" FontSize="18" Text="{Binding Age, Mode=OneWay}"/>
+        <TextBlock Grid.Row ="3" Foreground="Gray" TextWrapping="Wrap" TextAlignment="Center" FontSize="18"  Text="{Binding WesternZodiac, Mode=OneWay}"/>
+        <TextBlock Grid.Row ="4" Foreground="Gray" TextWrapping="Wrap" TextAlignment="Center" FontSize="18" Text="{Binding ChineseZodiac, Mode=OneWay}"/> 
+    </Grid>
+</Window>
